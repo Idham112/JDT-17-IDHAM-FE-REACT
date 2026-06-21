@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import Button from './components/button/Index';
 import Box from './components/box';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count] = useState(0)
 
   useEffect(() => {
     console.log("Pertama kali di render");

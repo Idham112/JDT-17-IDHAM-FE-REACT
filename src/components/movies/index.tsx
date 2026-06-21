@@ -25,7 +25,7 @@ const MoviesComponent = ({ movie }: Props) => {
           className="w-full max-w-[200px] h-auto object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <p className="mt-2 text-sm text-gray-200 truncate max-w-[200px]">
+      <p className="mt-2 text-sm truncate max-w-[200px]">
         {movie.original_title}
       </p>
     </div>

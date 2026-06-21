@@ -1,18 +1,18 @@
+import { getTopMovies, type Movie } from "../service/Movies";
 import { useEffect, useState } from "react";
-import { getPopularMovies, type Movie } from "../service/Movies";
 
-export const usePopular = (page: number) => {
-  const [popularMovie, setpopularMovie] = useState<Movie[]>([]);
+export const useTop = (page: number) => {
+  const [topList, setTopList] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [totalPages, setTotalPages] = useState<number>(1);
 
   useEffect(() => {
-    const getPopularMovie = async () => {
-      setLoading(true);
+    const fetchTop = async () => {
       try {
-        const response = await getPopularMovies(page);
+        setLoading(true);
+        const response = await getTopMovies(page);
         if (response) {
-          setpopularMovie(response.results);
+          setTopList(response.results);
           setTotalPages(response.total_pages);
         }
       } catch (error) {
@@ -21,8 +21,8 @@ export const usePopular = (page: number) => {
         setLoading(false);
       }
     };
-    getPopularMovie();
+    fetchTop();
   }, [page]);
 
-  return { popularMovie, loading, totalPages };
+  return { topList, loading, totalPages };
 };

@@ -11,3 +11,17 @@ export interface MovieDetails {
   original_title: string;
   poster_path: string;
 }
+
+export interface MovieVideoResponse {
+  id: number;
+  results: MovieVideo[];
+}
+
+export interface MovieVideo{
+  id: string;
+  name: string;
+  site: string;
+  key: string;
+  type: string;
+  official: boolean
+}

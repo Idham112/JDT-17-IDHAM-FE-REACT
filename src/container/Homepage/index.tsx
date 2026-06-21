@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../components/button/Index";
 import { useNavigate } from "react-router";
 import Box from "../../components/box";
 
 const Index = () => {
-  const [count, setCount] = useState(0);
+  const [count] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,12 +33,6 @@ const Index = () => {
   const movePageToMovie = () => {
     navigate("/movie");
   };
-
-  const movePageState = (url: string, state?: string) => {
-    navigate(url, {
-      state: state,
-    })
-  }
 
   return (
     <>

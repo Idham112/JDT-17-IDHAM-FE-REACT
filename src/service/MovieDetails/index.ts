@@ -1,5 +1,5 @@
-import { getMovieDetail } from "./api";
-import type { ResponseData, MovieDetails } from "./type";
+import { getMovieDetail, getMovieVideos } from "./api";
+import type { ResponseData, MovieDetails, MovieVideoResponse, MovieVideo } from "./type";
 
-export { getMovieDetail };
-export type { ResponseData, MovieDetails };
+export { getMovieDetail, getMovieVideos };
+export type { ResponseData, MovieDetails, MovieVideo, MovieVideoResponse };

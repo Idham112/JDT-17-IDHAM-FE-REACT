@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getMovieDetail, type MovieDetails } from "../service/MovieDetails";
 
 export const useMovieDetail = (id: string) => {
