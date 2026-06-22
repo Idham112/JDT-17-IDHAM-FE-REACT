@@ -31,17 +31,17 @@ const MovieGrid = ({
           <button
             onClick={() => onPageChange(page - 1)}
             disabled={page <= 1}
-            className="px-4 py-2 rounded-lg font-semibold bg-peach-light text-stone-800 hover:bg-peach disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer"
+            className="px-4 py-2 rounded-lg font-semibold bg-surface text-text hover:bg-nav disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer"
           >
             Prev
           </button>
-          <span className="px-4 py-2 font-semibold text-stone-800">
+          <span className="px-4 py-2 font-semibold text-text">
             {page} / {totalPages}
           </span>
           <button
             onClick={() => onPageChange(page + 1)}
             disabled={page >= totalPages}
-            className="px-4 py-2 rounded-lg font-semibold bg-peach-light text-stone-800 hover:bg-peach disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer"
+            className="px-4 py-2 rounded-lg font-semibold bg-surface text-text hover:bg-nav disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-200 cursor-pointer"
           >
             Next
           </button>

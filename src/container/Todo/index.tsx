@@ -18,7 +18,7 @@ const Todo = () => {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="flex flex-col items-center gap-5 w-full">
         <input
-          className="bg-white w-1/4"
+          className="bg-surface text-text w-1/4"
           onChange={(e) => setTextTodo(e.target.value)}
         />
         <button

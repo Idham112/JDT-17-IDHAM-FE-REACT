@@ -48,7 +48,7 @@ const Movies = () => {
           value={searchQuery}
           onChange={(e) => handleSearchChange(e.target.value)}
           placeholder="Search movies..."
-          className="w-full max-w-md px-4 py-2.5 rounded-lg bg-peach-light text-stone-800 placeholder-stone-400 shadow-md focus:outline-none focus:ring-2 focus:ring-red focus:border-red transition-all duration-200"
+          className="w-full max-w-md px-4 py-2.5 rounded-lg bg-surface text-text placeholder-text-muted shadow-md focus:outline-none focus:ring-2 focus:ring-red focus:border-red transition-all duration-200"
         />
       </div>
       {searchQuery.trim() ? (
@@ -61,20 +61,22 @@ const Movies = () => {
         />
       ) : (
         <>
-          <div className="flex gap-2 mb-6 justify-center">
-            {tabs.map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => handleTabChange(tab.key)}
-                className={`px-6 py-2 rounded-lg font-semibold shadow-sm transition-colors duration-200 cursor-pointer ${
-                  activeTab === tab.key
-                    ? "bg-red text-white shadow-md"
-                    : "bg-peach-light text-stone-800 hover:bg-peach"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex justify-center mb-6">
+            <div className="bg-surface p-1 rounded-xl shadow-md inline-flex gap-1">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.key}
+                  onClick={() => handleTabChange(tab.key)}
+                  className={`px-5 py-2 rounded-lg font-roboto font-semibold text-sm transition-all duration-300 cursor-pointer ${
+                    activeTab === tab.key
+                      ? "bg-red text-white shadow-sm"
+                      : "text-text-muted hover:text-text hover:bg-nav/60"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           {activeTab === "now-playing" && (

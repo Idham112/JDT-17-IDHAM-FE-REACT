@@ -15,7 +15,7 @@ const CV = () => {
           <img
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=630&h=322&fit=crop&crop=face"
             alt="Profile"
-            className="w-[630px] h-[322px] rounded-[10px] object-cover bg-gray-300 shrink-0"
+            className="w-157.5 h-80.5 rounded-[10px] object-cover bg-gray-300 shrink-0"
           />
 
           <div className="pt-12">
